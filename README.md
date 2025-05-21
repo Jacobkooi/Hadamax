@@ -36,7 +36,7 @@ Steps:
 
 1. Create a virtual environment and activate it.
 2. Install the required packages: `pip install -r requirements/requirements_cleanrl.txt`.
-3. Test: `python cleanrl/c51_hadamax.py --encoder='hadamax' --ENV_NAME='NameThisGame-v5'`.
+3. Test: `python cleanrl/c51_hadamax.py --encoder='hadamax' --env_id='NameThisGameNoFrameskip-v4'`.
 
 #### Commands:
 
@@ -48,7 +48,7 @@ python purejaxql/pqn_atari_hadamax.py --ENCODER='baseline'
 # Train PQN in Atari with the Impala ResNet-15 Encoder (PQN ResNet-15)
 python purejaxql/pqn_atari_hadamax.py --ENCODER='impala'
 # Train cleanRL's Categorical DQN (C51) algorithm with a Hadamax-encoder
-python cleanrl/c51_hadamax.py --encoder='hadamax' --env-id='NameThisGameNoFrameskip-v4'
+python cleanrl/c51_hadamax.py --encoder='hadamax' --env_id='NameThisGameNoFrameskip-v4'
 ```
 
 ## Citation
