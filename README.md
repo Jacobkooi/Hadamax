@@ -1,7 +1,5 @@
 # Hadamax Encoding: Elevating Model-Free Performance in Atari
 
-[![arXiv](https://img.shields.io/badge/arXiv-2407.04811-b31b1b.svg)](https://arxiv.org/abs/2407.04811)
-
 [Jacob E. Kooi](https://scholar.google.com/citations?user=GMcfK1MAAAAJ&hl=en), [Zhao Yang](https://yangzhao-666.github.io), [Vincent François-Lavet](http://vincent.francois-l.be)
 
 This is the official repository for the paper: Hadamax Encoding: Elevating Model-Free Performance in Atari. The Hadamax (**Hada**mard **max**-pooling) encoder is a new pixel-based encoder that achieves state-of-the-art model-free performance on the Atari 57 200M benchmark.
