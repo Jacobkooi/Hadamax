@@ -1,0 +1,20 @@
+# PyCharm project files
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.pyo
+*.pyc
+*.pyd
+*.pyz
+*.whl
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.env
+venv/
+env/
+*.log

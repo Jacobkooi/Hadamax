@@ -1,0 +1,34 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/jax:24.04-py3
+
+%environment
+    # Set your environment variable here
+    export WANDB_API_KEY="d43417438e2d7cd24d6064bba620777b40183bd5"
+
+
+%files
+    /home/zyang/purejaxql /home/jkooi/purejaxql
+
+%post
+    # Create user (optional — Apptainer typically runs as the calling user)
+    # echo "Creating user..."  # Not required unless you need to simulate Docker setup
+
+    # Set working directory
+    cd /home/jkooi/purejaxql/
+
+    # Copy code (done automatically during build if done from local context)
+#cp -r /home/jkooi/purejaxql/pyproject.toml /home/jkooi/purejaxql/app
+#rsync -av --exclude=app /home/jkooi/purejaxql/* /home/zyang/purejaxql/app/
+
+    # Install Python dependencies
+    pip install --upgrade pip
+    pip install -e .[atari]
+
+%labels
+    Author Jacob
+
+%runscript
+    # Default command when running the container
+    cd /home/jkooi/purejaxql/app
+    exec python
+
