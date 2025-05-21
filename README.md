@@ -53,18 +53,18 @@ python cleanrl/c51_hadamax.py --encoder='hadamax' --env-id='NameThisGameNoFrames
 
 ## Citation
 
-If you use the Hadamax encoder in your work, please cite the following paper:
+If you use Hadamax Encoding in your work, please cite the following paper:
 
 ```
 ### TODO Fix CITATION!!
 @misc{kooi2025hadamax,
       title={Hadamax Encoding: Elevating Model-Free Performance in Atari}, 
-      author={Jacob E. Kooi and Zhao Yang and Vincent Fran\c{c}ois-Lavet},
+      author={Jacob E. Kooi and Zhao Yang and Vincent François-Lavet},
       year={2025},
-      eprint={2407.04811},
+      eprint={-----},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2407.04811}, 
+      url={------}, 
 }
 ```
 
