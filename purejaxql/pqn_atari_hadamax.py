@@ -471,18 +471,39 @@ def single_run(config):
     alg_name = config.get("ALG_NAME", "pqn")
     env_name = config["ENV_NAME"]
 
-    wandb.init(
-        entity=config["ENTITY"],
-        project=config["PROJECT"],
-        tags=[
-            alg_name.upper(),
-            env_name.upper(),
-            f"jax_{jax.__version__}",
-        ],
-        name=f'{config["ALG_NAME"]}_{config["ENV_NAME"]}',
-        config=config,
-        mode=config["WANDB_MODE"],
-    )
+    if config["WANDB_MODE"] == "disabled":
+        user_choice = input("WANDB Mode is currently disabled. Please set the WANDB_MODE config to 'online' if you want standard logging. For this run, do you want to use wandb? (yes/no): ").strip().lower()
+        if user_choice == "yes":
+            print("User chose to use wandb. Proceeding with wandb initialization.")
+            wandb.init(
+                entity=config["ENTITY"],
+                project=config["PROJECT"],
+                tags=[
+                    alg_name.upper(),
+                    env_name.upper(),
+                    f"jax_{jax.__version__}",
+                ],
+                name=f'{config["ALG_NAME"]}_{config["ENV_NAME"]}',
+                config=config,
+                mode="online"  # Default to "online" when user opts in
+            )
+        else:
+            print("User chose not to use wandb. Proceeding without logging.")
+    else:
+        print("WANDB active. Proceeding with wandb initialization.")
+        wandb.init(
+            entity=config["ENTITY"],
+            project=config["PROJECT"],
+            tags=[
+                alg_name.upper(),
+                env_name.upper(),
+                f"jax_{jax.__version__}",
+            ],
+            name=f'{config["ALG_NAME"]}_{config["ENV_NAME"]}',
+            config=config,
+            mode=config["WANDB_MODE"]
+        )
+
 
     rng = jax.random.PRNGKey(config["SEED"])
 
@@ -536,10 +557,9 @@ def parse_args():
     parser.add_argument('--TEST_ENVS', type=int, default=8, help="Number of environments used for testing")
 
     # WandB and experiment tracking configuration
-    parser.add_argument('--WANDB_MODE', type=str, default="online", help="Wandb mode (online, offline, disabled)")
-    parser.add_argument('--PROJECT', type=str, default="purejaxql", help="Wandb project name")
+    parser.add_argument('--WANDB_MODE', type=str, default="disabled", help="Wandb mode (online, offline, disabled)")
+    parser.add_argument('--PROJECT', type=str, default="hadamax", help="Wandb project name")
     parser.add_argument('--ENTITY', type=str, default=None, help="Wandb entity/user")
-    parser.add_argument('--HYP_TUNE', action='store_true', help="Run hyperparameter tuning")
     parser.add_argument('--WANDB_LOG_ALL_SEEDS', type=bool, default=False, help="Log all seeds in Wandb")
 
     # Random seed and other general parameters
@@ -551,12 +571,9 @@ def parse_args():
 
 def main():
     args = parse_args()
-    config = vars(args)  # Convert Namespace to dict
+    config = vars(args)
     print("Config:\n", yaml.dump(config))
-    if config.get("HYP_TUNE", False):
-        tune(config)
-    else:
-        single_run(config)
+    single_run(config)
 
 if __name__ == "__main__":
     main()
