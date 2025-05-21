@@ -30,7 +30,7 @@ Steps:
 2. (Optional) Set your WANDB key in the [Dockerfile](docker/Dockerfile).
 3. Build with `bash docker/build_atari.sh`.
 4. Run a container: `bash docker/run_atari.sh`
-5. Test: `python purejaxql/pqn_atari_hadamax.py --ENCODER='hadamax' --ENV_NAME='Seaquest-v5`.
+5. Test: `python purejaxql/pqn_atari_hadamax.py --ENCODER='hadamax' --ENV_NAME='Seaquest-v5'`.
 
 ## CleanRL's C51 Usage  (With requirements_cleanrl.txt)
 
