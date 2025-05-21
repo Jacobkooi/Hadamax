@@ -11,7 +11,7 @@ After around 3 hours of training and 200M environment frames, the PQN-Hadamax va
   <tr>
     <td style="width: 33.33%; vertical-align: top; padding: 10px;">
       <h4>Performance VS GPU-Hours 200M Env Frames</h4>
-      <img src="performance.png" alt="Atari-57_performance_vs_cost" width="300" height="225" style="max-width: 100%; display: block; margin: 0 auto;"/>
+      <img src="performance.png" alt="Atari-57_performance_vs_cost" width="400" height="225" style="max-width: 100%; display: block; margin: 0 auto;"/>
     </td>
     <td style="width: 33.33%; vertical-align: top; padding: 10px;">
       <h4>Training Curve 200M Env Frames</h4>
@@ -36,7 +36,7 @@ Steps:
 
 1. Create a virtual environment and activate it.
 2. Install the required packages: `pip install -r requirements/requirements_cleanrl.txt`.
-3. Test: `python cleanrl/c51_hadamax.py --encoder='hadamax' --ENV_NAME='NameThisGameNoFrameskip-v5'`.
+3. Test: `python cleanrl/c51_hadamax.py --encoder='hadamax' --ENV_NAME='NameThisGame-v5'`.
 
 #### Commands:
 
@@ -48,7 +48,7 @@ python purejaxql/pqn_atari_hadamax.py --ENCODER='baseline'
 # Train PQN in Atari with the Impala ResNet-15 Encoder (PQN ResNet-15)
 python purejaxql/pqn_atari_hadamax.py --ENCODER='impala'
 # Train cleanRL's Categorical DQN (C51) algorithm with a Hadamax-encoder
-python cleanrl/c51_hadamax.py --encoder='hadamax' --ENV_NAME='NameThisGameNoFrameskip-v5'
+python cleanrl/c51_hadamax.py --encoder='hadamax' --env-id='NameThisGameNoFrameskip-v4'
 ```
 
 ## Citation
