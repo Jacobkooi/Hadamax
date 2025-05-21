@@ -2,6 +2,8 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2407.04811-b31b1b.svg)](https://arxiv.org/abs/2407.04811)
 
+[Jacob E. Kooi](https://scholar.google.com/citations?user=GMcfK1MAAAAJ&hl=en), [Zhao Yang](https://yangzhao-666.github.io), [Vincent François-Lavet](http://vincent.francois-l.be)
+
 This is the official repository for the paper: Hadamax Encoding: Elevating Model-Free Performance in Atari. The Hadamax (**Hada**mard **max**-pooling) encoder is a new pixel-based encoder that achieves state-of-the-art model-free performance on the Atari 57 200M benchmark.
 ### Atari Performance
 
@@ -34,7 +36,7 @@ Steps:
 
 ## CleanRL's C51 Usage  (With requirements_cleanrl.txt)
 
-1. Create a virtual environment and activate it.
+1. Create a virtual environment and activate it. For example, if you use conda, run `conda create -n myenv "python>=3.8,<3.11"` and then `conda activate myenv`
 2. Install the required packages: `pip install -r requirements/requirements_cleanrl.txt`.
 3. Test: `python cleanrl/c51_hadamax.py --encoder='hadamax' --env_id='NameThisGameNoFrameskip-v4'`.
 
