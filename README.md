@@ -1,4 +1,5 @@
-# Hadamax Encoding: Elevating Model-Free Performance in Atari
+# Hadamax Encoding: Elevating Performance in Model-Free Atari
+[![arXiv](https://img.shields.io/badge/arXiv-2505.15345-b31b1b.svg)](https://arxiv.org/abs/2505.15345)
 
 [Jacob E. Kooi](https://scholar.google.com/citations?user=GMcfK1MAAAAJ&hl=en), [Zhao Yang](https://yangzhao-666.github.io), [Vincent François-Lavet](http://vincent.francois-l.be)
 
@@ -55,29 +56,18 @@ python cleanrl/c51_hadamax.py --encoder='hadamax' --env_id='NameThisGameNoFrames
 
 If you use Hadamax Encoding in your work, please cite the following paper:
 
--- Arxiv Submission Processsing. Will update soon.
+```
+@misc{kooi2025hadamax,
+title={Hadamax Encoding: Elevating Performance in Model-Free Atari}, 
+author={Jacob E. Kooi and Zhao Yang and Vincent François-Lavet},
+year={2025},
+eprint={2505.15345},
+archivePrefix={arXiv},
+primaryClass={cs.LG},
+url={https://arxiv.org/abs/2505.15345}, 
+}
+```
 
-[//]: # (```)
-
-[//]: # (@misc{kooi2025hadamax,)
-
-[//]: # (      title={Hadamax Encoding: Elevating Model-Free Performance in Atari}, )
-
-[//]: # (      author={Jacob E. Kooi and Zhao Yang and Vincent François-Lavet},)
-
-[//]: # (      year={2025},)
-
-[//]: # (      eprint={-----},)
-
-[//]: # (      archivePrefix={arXiv},)
-
-[//]: # (      primaryClass={cs.LG},)
-
-[//]: # (      url={------}, )
-
-[//]: # (})
-
-[//]: # (```)
 
 ## Related Projects
 
