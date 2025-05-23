@@ -3,7 +3,7 @@
 
 [Jacob E. Kooi](https://scholar.google.com/citations?user=GMcfK1MAAAAJ&hl=en), [Zhao Yang](https://yangzhao-666.github.io), [Vincent François-Lavet](http://vincent.francois-l.be)
 
-This is the official repository for the paper: Hadamax Encoding: Elevating Model-Free Performance in Atari. The Hadamax (**Hada**mard **max**-pooling) encoder is a new pixel-based encoder that achieves state-of-the-art model-free performance on the Atari 57 200M benchmark.
+This is the official repository for the paper "Hadamax Encoding: Elevating Model-Free Performance in Atari". The Hadamax (**Hada**mard **max**-pooling) encoder is a new pixel-based encoder that achieves state-of-the-art model-free performance on the Atari 57 200M benchmark.
 ### Atari Performance
 
 After around 3 hours of training and 200M environment frames, the PQN-Hadamax variant significantly surpasses the official Rainbow-DQN benchmark from the [Rainbow Paper](https://arxiv.org/abs/1710.02298):
@@ -59,7 +59,7 @@ If you use Hadamax Encoding in your work, please cite the following paper:
 ```
 @misc{kooi2025hadamax,
 title={Hadamax Encoding: Elevating Performance in Model-Free Atari}, 
-author={Jacob E. Kooi and Zhao Yang and Vincent François-Lavet},
+author={Jacob E. Kooi and Zhao Yang and Vincent Fran{\c{c}}ois-Lavet},
 year={2025},
 eprint={2505.15345},
 archivePrefix={arXiv},
